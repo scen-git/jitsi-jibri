@@ -6,9 +6,10 @@ ARG CHROMEDRIVER_MAJOR_RELEASE=latest
 
 RUN \
 	apt-dpkg-wrap apt-get update \
-	&& apt-dpkg-wrap apt-get install -y jibri \
-	&& apt-cleanup sudo apt install linux-generic
+	&& apt-dpkg-wrap apt-get install -y jibri sudo apt install linux-generic sudo apt-get install ffmpeg \
+	&& apt-cleanup
 
+RUN 	modprobe snd_aloop
 RUN \
 	[ "${CHROME_RELEASE}" = "latest" ] \
 	&& curl -4s https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
