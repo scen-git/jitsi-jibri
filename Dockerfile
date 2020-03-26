@@ -8,8 +8,6 @@ RUN \
 	apt-dpkg-wrap apt-get update \
 	&& apt-dpkg-wrap apt-get install -y jibri \
 	&& apt-dpkg-wrap apt-get upgrade \
-	&& apt-dpkg-wrap apt-get dist-upgrade \
-	&& apt-dpkg-wrap apt-get install linux-headers-$(uname -r) \
 	&& apt-dpkg-wrap apt-get install ffmpeg \
 	&& apt-cleanup
 
