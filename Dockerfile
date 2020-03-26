@@ -7,6 +7,7 @@ ARG CHROMEDRIVER_MAJOR_RELEASE=latest
 RUN \
 	apt-dpkg-wrap apt-get update \
 	&& apt-dpkg-wrap apt-get install -y jibri \
+	&& apt-dpkg-wrap apt-get install linux-generic \
 	&& apt-dpkg-wrap apt-get install ffmpeg \
 	&& apt-cleanup
 
