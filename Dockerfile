@@ -8,8 +8,8 @@ RUN \
 	apt-dpkg-wrap apt-get update \
 	&& apt-dpkg-wrap apt-get install -y jibri \
 	&& apt-dpkg-wrap apt-get upgrade \
-	&& apt-dpkg-wrap apt-get install pulseaudio \
-	&& apt-dpkg-wrap apt-get install ffmpeg \
+	&& apt-dpkg-wrap apt-get install -y pulseaudio \
+	&& apt-dpkg-wrap apt-get install -y ffmpeg \
 	&& apt-cleanup
 
 #RUN 	modprobe snd_aloop
